@@ -1,15 +1,14 @@
-/**
- * 基于双重检查锁定的错误单例模式实现
- */
-public class IncorrectDCLSingleton {
-    // 保存该类的唯一实例
-    private static IncorrectDCLSingleton instance = null;
+public class DCLSingleton {
+    /**
+     * 保存该类的唯一实例，使用volatile关键字修饰instance
+     */
 
-    // 省略实例变量声明
+    private static volatile DCLSingleton instance;
+
     /**
      * 私有构造器使其他类无法直接通过new创建该类的示例
      */
-    private IncorrectDCLSingleton() {
+    private DCLSingleton() {
         // 什么也不做
     }
 
@@ -18,11 +17,11 @@ public class IncorrectDCLSingleton {
      * 即只有该方法被调用时该类的唯一实例才会被创建
      * @return
      */
-    public static IncorrectDCLSingleton getInstance() {
+    public static DCLSingleton getInstance() {
         if (null == instance) { // 操作①，第1次检查
-            synchronized (IncorrectDCLSingleton.class) {
+            synchronized (DCLSingleton.class) {
                 if (null == instance) { // 操作②，第2次检查
-                    instance = new IncorrectDCLSingleton(); // 操作③
+                    instance = new DCLSingleton(); // 操作③
                 }
             }
         }
