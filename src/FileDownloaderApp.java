@@ -29,20 +29,20 @@
 //
 //        @Override
 //        public void run() {
-//            Debug.info("Downloading from " + fileURL);
+//            stf.Debug.info("Downloading from " + fileURL);
 //            String fileBaseName = fileURL.substring(fileURL.lastIndexOf('/') + 1);
 //            try {
 //                URL url = new URL(fileURL);
 //                String localFileName = System.getProperty("java.io.tmpdir")
 //                        + "/viscent-"
 //                        + fileBaseName;
-//                Debug.info("Saving to: " + localFileName);
+//                stf.Debug.info("Saving to: " + localFileName);
 //                downloadFile(url, new FileOutputStream(
 //                        localFileName), 1024);
 //            } catch (Exception e) {
 //                e.printStackTrace();
 //            }
-//            Debug.info("Done downloading from " + fileURL);
+//            stf.Debug.info("Done downloading from " + fileURL);
 //        }
 //
 //        // 从指定的URL下载文件，并将其保存到指定的输出流中
@@ -63,7 +63,7 @@
 //                }
 //
 //                if (0 == httpConn.getContentLength()) {
-//                    Debug.info("Nothing to be downloaded " + fileURL);
+//                    stf.Debug.info("Nothing to be downloaded " + fileURL);
 //                    return;
 //                }
 //                inChannel = Channels
@@ -78,7 +78,7 @@
 //                }
 //            } finally {
 //                // 关闭指定的Channel以及HttpURLConnection
-//                Tools.silentClose(inChannel, outChannel);
+//                stf.Tools.silentClose(inChannel, outChannel);
 //                httpConn.disconnect();
 //            }
 //        }// downloadFile结束

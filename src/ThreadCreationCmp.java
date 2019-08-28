@@ -49,7 +49,7 @@
 //
 //        private void doSomething() {
 //            // 使当前线程休眠随机时间
-//            Tools.randomPause(80);
+//            stf.Tools.randomPause(80);
 //        }
 //    }
 //
@@ -67,7 +67,7 @@
 //
 //        private void doSomething() {
 //            // 使当前线程休眠随机时间
-//            Tools.randomPause(80);
+//            stf.Tools.randomPause(80);
 //        }
 //    }
 //}

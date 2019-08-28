@@ -1,3 +1,5 @@
+import stf.Tools;
+
 public class ThreadStartVisibility {
     // 线程间的共享变量
     static int data = 0;

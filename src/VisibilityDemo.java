@@ -1,3 +1,5 @@
+import stf.Tools;
+
 public class VisibilityDemo {
 
     public static void main(String[] args) throws InterruptedException {

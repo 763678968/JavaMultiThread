@@ -1,3 +1,5 @@
+import stf.Tools;
+
 public class RaceConditionDemo {
 
     public static void main(String[] args) throws Exception {
