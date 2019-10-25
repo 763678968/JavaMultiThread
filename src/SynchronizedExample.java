@@ -13,8 +13,9 @@ public class SynchronizedExample {
 
     public static void main(String[] args) {
         SynchronizedExample e1 = new SynchronizedExample();
+        SynchronizedExample e2 = new SynchronizedExample();
         ExecutorService executorService = Executors.newCachedThreadPool();
         executorService.execute(() -> e1.func1());
-        executorService.execute(() -> e1.func1());
+        executorService.execute(() -> e2.func1());
     }
 }
